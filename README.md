@@ -1,8 +1,8 @@
 # gulp-px3rem
 
-(px2rem)[https://www.npmjs.com/package/px2rem]的gulp插件
+[px2rem](https://www.npmjs.com/package/px2rem)的gulp插件
 
-独立cli使用见(px2rem)[https://www.npmjs.com/package/px2rem]
+独立cli使用见[px2rem](https://www.npmjs.com/package/px2rem)
 
 ## 使用
 
