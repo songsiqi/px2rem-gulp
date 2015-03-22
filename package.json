@@ -1,0 +1,54 @@
+{
+    "name": "gulp-px3rem",
+    "description": "px2rem的gulp插件",
+    "version": "0.1.0",
+    "homepage": "http://gitlab.alibaba-inc.com/one-request/px2rem-gulp",
+    "author": {
+        "name": "颂奇",
+        "email": "siqi.song@alibaba-inc.com"
+    },
+    "contributors": [
+        {
+            "name": "岑安",
+            "email": "cenan.chr@alibaba-inc.com"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@gitlab.alibaba-inc.com:one-request/px2rem-gulp.git"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "dependencies": {
+        "through2": "^0.6.1",
+        "gulp-util": "^3.0.0",
+        "extend": "~2.0.0",
+        "chalk": "~0.5.1",
+        "fs-extra": "~0.16.3",
+        "px2rem": "~0.1.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.8.10",
+        "istanbul": "^0.3.6",
+        "coveralls": "^2.10.0",
+        "mocha": "^2.1.0",
+        "cssmin": "~0.4.3"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha",
+        "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
+    },
+    "main": "index.js",
+    "keywords": [
+        "3x",
+        "rem",
+        "px2rem",
+        "gulp"
+    ],
+    "readmeFilename": "README.md",
+    "license": "MIT"
+}
