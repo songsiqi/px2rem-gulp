@@ -26,6 +26,7 @@
         "extend": "~2.0.0",
         "chalk": "~0.5.1",
         "fs-extra": "~0.16.3",
+        "vinyl": "0.4.6",
         "px2rem": "~0.1.0"
     },
     "devDependencies": {
