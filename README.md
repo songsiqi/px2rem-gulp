@@ -2,6 +2,8 @@
 
 This is a gulp plugin for [px2rem](https://www.npmjs.com/package/px2rem)
 
+CLI tool provided in [px2rem](https://www.npmjs.com/package/px2rem)
+
 ## Usage
 
 ```
