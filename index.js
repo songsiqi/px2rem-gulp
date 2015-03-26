@@ -5,7 +5,12 @@ var gutil = require('gulp-util');
 var Px2rem = require('px2rem');
 var chalk = require('chalk');
 var fs = require('fs-extra');
-var File = require('vinyl'); // 借助这个模块完成gulp 1 -> n功能，https://gist.github.com/cecilemuller/40880002c340edaa7e4a
+
+// Vinyl is a very simple metadata object that describes a file，
+// see https://medium.com/@contrahacks/gulp-3828e8126466
+// We use it to output multiple files from a single input file while using gulp.
+// see https://gist.github.com/cecilemuller/40880002c340edaa7e4a
+var File = require('vinyl');
 
 var PluginError = gutil.PluginError;
 var pluginName = 'gulp-px3rem';
@@ -14,13 +19,13 @@ var pluginName = 'gulp-px3rem';
 module.exports = function(options) {
 
     var config = {
-        baseDpr: 2,             // 基准devicePixelRatio，默认为2
-        threeVersion: true,     // 是否生成1x、2x、3x版本，默认为true
-        remVersion: true,       // 是否生成rem版本，默认为true
-        remUnit: 64,            // rem基准像素，默认为64
-        remPrecision: 6,        // rem计算精度，默认为6，即保留小数点后6位
-        forcePxComment: 'px',   // 不转换为rem的注释，默认为"px"
-        keepComment: 'no'       // 不参与转换的注释，默认为"no"，如1px的边框
+        baseDpr: 2,             // base device pixel ratio (default: 2)
+        threeVersion: true,     // whether to generate 3x version (default: true)
+        remVersion: true,       // whether to generate rem version (default: true)
+        remUnit: 64,            // rem unit value (default: 64)
+        remPrecision: 6,        // rem precision (default: 6)
+        forcePxComment: 'px',   // force px comment (default: `px`)
+        keepComment: 'no'       // not change value comment (default: `no`)
     };
 
     extend(config, options);
@@ -41,7 +46,7 @@ module.exports = function(options) {
             var fileName = path.basename(file.path);
             var base = path.join(file.path, '..');
 
-            // 生成3份版本
+            // generate @1x, @2x and @3x version
             if (config.threeVersion) {
                 for (var dpr = 1; dpr <= 3; dpr++) {
                     var newCssText = px2remIns.generateThree(cssText, dpr);
@@ -55,7 +60,7 @@ module.exports = function(options) {
                 }
             }
 
-            // 生成rem版本
+            // generate rem version
             if (config.remVersion) {
                 var newCssText = px2remIns.generateRem(cssText);
                 var newFileName = fileName.replace(/(.debug)?.css/, '.debug.css');
@@ -68,8 +73,8 @@ module.exports = function(options) {
             }
         }
 
-        return callback();
+        return callback(); // indicate that the file has been processed
     }
 
-    return through.obj(transformFunction);
+    return through.obj(transformFunction); // returning the file stream
 };
