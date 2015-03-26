@@ -1,6 +1,6 @@
 # gulp-px3rem
 
-A gulp plugin for [px2rem](https://www.npmjs.com/package/px2rem)
+This is a gulp plugin for [px2rem](https://www.npmjs.com/package/px2rem)
 
 ## Usage
 
@@ -25,6 +25,10 @@ px2rem({
     remUnit: 64,            // rem unit value (default: 64)
     remPrecision: 6,        // rem precision (default: 6)
     forcePxComment: 'px',   // force px comment (default: `px`)
-    keepComment: 'no'       // not change value comment (default: `no`)
+    keepComment: 'no'       // no transform value comment (default: `no`)
 })
 ```
+
+## License
+
+MIT

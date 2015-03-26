@@ -1,6 +1,6 @@
 {
     "name": "gulp-px3rem",
-    "description": "px2rem的gulp插件",
+    "description": "A gulp plugin for px2rem",
     "version": "0.1.0",
     "homepage": "http://gitlab.alibaba-inc.com/one-request/px2rem-gulp",
     "author": {

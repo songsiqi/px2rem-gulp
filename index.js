@@ -20,12 +20,12 @@ module.exports = function(options) {
 
     var config = {
         baseDpr: 2,             // base device pixel ratio (default: 2)
-        threeVersion: true,     // whether to generate 3x version (default: true)
-        remVersion: true,       // whether to generate rem version (default: true)
+        threeVersion: true,     // whether to generate @1x, @2x and @3x version stylesheet (default: true)
+        remVersion: true,       // whether to generate rem version stylesheet (default: true)
         remUnit: 64,            // rem unit value (default: 64)
-        remPrecision: 6,        // rem precision (default: 6)
+        remPrecision: 6,        // rem value precision (default: 6)
         forcePxComment: 'px',   // force px comment (default: `px`)
-        keepComment: 'no'       // not change value comment (default: `no`)
+        keepComment: 'no'       // no transform value comment (default: `no`)
     };
 
     extend(config, options);
@@ -46,7 +46,7 @@ module.exports = function(options) {
             var fileName = path.basename(file.path);
             var base = path.join(file.path, '..');
 
-            // generate @1x, @2x and @3x version
+            // generate @1x, @2x and @3x version stylesheet
             if (config.threeVersion) {
                 for (var dpr = 1; dpr <= 3; dpr++) {
                     var newCssText = px2remIns.generateThree(cssText, dpr);
@@ -60,7 +60,7 @@ module.exports = function(options) {
                 }
             }
 
-            // generate rem version
+            // generate rem version stylesheet
             if (config.remVersion) {
                 var newCssText = px2remIns.generateRem(cssText);
                 var newFileName = fileName.replace(/(.debug)?.css/, '.debug.css');
