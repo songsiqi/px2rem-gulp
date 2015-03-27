@@ -1,7 +1,7 @@
 {
     "name": "gulp-px3rem",
     "description": "A gulp plugin for px2rem",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "homepage": "http://gitlab.alibaba-inc.com/one-request/px2rem-gulp",
     "author": {
         "name": "颂奇",
@@ -27,7 +27,7 @@
         "chalk": "~0.5.1",
         "fs-extra": "~0.16.3",
         "vinyl": "0.4.6",
-        "px2rem": "~0.1.2"
+        "px2rem": "~0.1.4"
     },
     "devDependencies": {
         "gulp": "^3.8.10",

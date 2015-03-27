@@ -108,7 +108,7 @@ textarea:focus {
 
 html {
   background: #eee;
-  font-size: 24px;
+  font-size: 12px;
 }
 
 img {
@@ -157,11 +157,11 @@ img {
 .timeaxis-bar .timeaxis-item .timeaxis-time {
   margin: 0 auto 2px;
   font-family: arial;
-  font-size: 32px;
+  font-size: 16px;
 }
 
 .timeaxis-bar .timeaxis-item .timeaxis-info {
-  font-size: 22px;
+  font-size: 11px;
 }
 
 .timeaxis-bar .timeaxis-item.timeaxis-active {
@@ -171,7 +171,7 @@ img {
 
 .timeaxis-bar .timeaxis-item.timeaxis-active .timeaxis-time {
   margin-bottom: 1px;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -203,7 +203,7 @@ img {
 
 .batch-header {
   padding: 16px 12px 11px;
-  font-size: 28px;
+  font-size: 14px;
   background-color: #eee;
 }
 
@@ -248,7 +248,7 @@ img {
   padding: 3px;
   color: white;
   line-height: 18px;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: bold;
   background-color: #fc353a;
 }
@@ -261,14 +261,14 @@ img {
 .item .item-tag.tag-discount .tag-percent {
   width: 12px;
   line-height: 10px;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 100;
 }
 
 .item .item-tag.tag-discount .tag-info {
   line-height: 22px;
   font-family: arial;
-  font-size: 44px;
+  font-size: 22px;
   font-weight: 900;
 }
 
@@ -307,7 +307,7 @@ img {
   line-height: 16px;
   margin-bottom: 10px;
   color: #333;
-  font-size: 28px;
+  font-size: 14px;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -324,12 +324,12 @@ img {
 
 .item .item-price .item-newprice {
   color: #fc353a;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 900;
 }
 
 .item .item-price .item-newprice span {
-  font-size: 28px;
+  font-size: 14px;
 }
 
 .item .item-action {
@@ -337,7 +337,7 @@ img {
   line-height: 28px;
   width: 56px;
   border-radius: 4px;
-  font-size: 28px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
 }
@@ -437,7 +437,7 @@ img {
   margin-left: 10px;
   line-height: 30px;
   color: #999;
-  font-size: 24px;
+  font-size: 12px;
   vertical-align: top;
 }
 
@@ -515,5 +515,5 @@ img {
 }
 
 .entry .entry-name {
-  font-size: 20px;
+  font-size: 10px;
 }

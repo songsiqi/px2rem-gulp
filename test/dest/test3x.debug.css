@@ -5,8 +5,8 @@ body {
   color: #888;
   /* color is gray */
   border: 1px solid;
-  height: 20px;
-  padding: 6px;
+  height: 30px;
+  padding: 9px;
 }
 
 .header,
@@ -14,7 +14,7 @@ body {
   width: 100%;
   height: 30px;
   margin: 15px;
-  font-size: 14px;
+  font-size: 42px;
 }
 
 .sidebar {
