@@ -1,10 +1,10 @@
+'use strict';
+
 var path = require('path');
 var extend = require('extend');
 var through = require('through2');
 var gutil = require('gulp-util');
 var Px2rem = require('px2rem');
-var chalk = require('chalk');
-var fs = require('fs-extra');
 
 // Vinyl is a very simple metadata object that describes a file，
 // see https://medium.com/@contrahacks/gulp-3828e8126466
@@ -42,18 +42,15 @@ module.exports = function(options) {
         if (file.isBuffer()) {
             var px2remIns = new Px2rem(config);
             var cssText = file.contents.toString('utf8');
-            var pathName = file.path;
-            var fileName = path.basename(file.path);
-            var base = path.join(file.path, '..');
 
             // generate @1x, @2x and @3x version stylesheet
             if (config.threeVersion) {
                 for (var dpr = 1; dpr <= 3; dpr++) {
                     var newCssText = px2remIns.generateThree(cssText, dpr);
-                    var newFileName = fileName.replace(/(.debug)?.css/, dpr + 'x.debug.css');
                     var vfile = new File({
-                        base: base,
-                        path: path.join(base, newFileName),
+                        cwd: file.cwd,
+                        base: file.base,
+                        path: file.path.replace(/(.debug)?.css$/, dpr + 'x.debug.css'),
                         contents: new Buffer(newCssText)
                     });
                     this.push(vfile);
@@ -63,10 +60,10 @@ module.exports = function(options) {
             // generate rem version stylesheet
             if (config.remVersion) {
                 var newCssText = px2remIns.generateRem(cssText);
-                var newFileName = fileName.replace(/(.debug)?.css/, '.debug.css');
                 var vfile = new File({
-                    base: base,
-                    path: path.join(base, newFileName),
+                    cwd: file.cwd,
+                    base: file.base,
+                    path: file.path.replace(/(.debug)?.css$/, '.debug.css'),
                     contents: new Buffer(newCssText)
                 });
                 this.push(vfile);
