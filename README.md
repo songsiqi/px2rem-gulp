@@ -17,7 +17,7 @@ Gulpfile.js：
 
 ```
 var gulp = require('gulp');
-var px2rem = require('../index');
+var px2rem = require('gulp-px3rem');
 
 gulp.task('px2rem', function() {
     gulp.src('./*.css')
