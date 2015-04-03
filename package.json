@@ -1,7 +1,8 @@
 {
     "name": "gulp-px3rem",
-    "description": "https://github.com/songsiqi/px2rem-gulp",
-    "version": "0.1.5",
+    "description": "A gulp plugin for px2rem",
+    "version": "0.1.6",
+    "homepage": "https://github.com/songsiqi/px2rem-gulp",
     "author": {
         "name": "songsiqi",
         "email": "songsiqi2006@126.com"
