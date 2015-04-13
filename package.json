@@ -1,7 +1,7 @@
 {
     "name": "gulp-px3rem",
     "description": "A gulp plugin for px2rem",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "homepage": "https://github.com/songsiqi/px2rem-gulp",
     "author": {
         "name": "songsiqi",
@@ -25,7 +25,7 @@
         "gulp-util": "^3.0.0",
         "extend": "~2.0.0",
         "vinyl": "0.4.6",
-        "px2rem": "~0.1.5"
+        "px2rem": "~0.1.7"
     },
     "devDependencies": {
         "gulp": "^3.8.10",

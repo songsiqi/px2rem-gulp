@@ -111,6 +111,13 @@ Rem version: `test.debug.css`
 }
 ```
 
+## Change Log
+
+### 0.1.7
+
+* Deps: px2rem@~0.1.7
+    * Fix regular expression bug and common comments bug which affects rem transformation.
+
 ## License
 
 MIT
