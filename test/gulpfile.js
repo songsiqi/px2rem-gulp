@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var px2rem = require('../index');
 
 gulp.task('px2rem-1', function() {
-    gulp.src('./src/**/*.css')
+    gulp.src(['./src/**/*.css', '!./src/**/*.debug.css'])
         .pipe(px2rem())
         .pipe(gulp.dest('src'));
 });

@@ -233,11 +233,11 @@ img {
 .item {
   position: relative;
   padding: 8px 12px;
-  border-top: 0px solid #ccc;
+  border-top: 1px solid #ccc;
 }
 
 .item:last-of-type {
-  border-bottom: 0px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .item .item-tag {
@@ -368,7 +368,7 @@ img {
   box-sizing: border-box;
   height: 6px;
   width: 88px;
-  border: 0px solid #fd7b7d;
+  border: 1px solid #fd7b7d;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -453,8 +453,8 @@ img {
   width: 100%;
   z-index: 9;
   height: 49px;
-  border-top: 0px solid #ccc;
-  border-radius: 0px;
+  border-top: 1px solid #ccc;
+  border-radius: 1px;
   background-color: #f3f3f3;
   -webkit-transform: translateZ(0);
 }

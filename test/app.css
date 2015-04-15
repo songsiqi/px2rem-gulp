@@ -142,9 +142,9 @@ img {
 .item {
   position: relative;
   padding: 16px 24px;
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #ccc; /*no*/ }
   .item:last-of-type {
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid #ccc; /*no*/ }
   .item .item-tag {
     position: absolute;
     top: 4px;
@@ -234,7 +234,7 @@ img {
       box-sizing: border-box;
       height: 12px;
       width: 176px;
-      border: 1px solid #fd7b7d;
+      border: 1px solid #fd7b7d; /*no*/
       border-radius: 10px;
       overflow: hidden; }
     .item .item-status .status-progress {
@@ -302,8 +302,8 @@ img {
   width: 100%;
   z-index: 9;
   height: 98px;
-  border-top: 1px solid #ccc;
-  border-radius: 1px;
+  border-top: 1px solid #ccc; /*no*/
+  border-radius: 1px; /*no*/
   background-color: #f3f3f3;
   -webkit-transform: translateZ(0); }
 
