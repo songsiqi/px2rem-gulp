@@ -113,6 +113,11 @@ Rem version: `test.debug.css`
 
 ## Change Log
 
+### 0.1.9
+
+* Deps: px2rem@^0.2.0
+    * Support media query.
+
 ### 0.1.8
 
 * Deps: px2rem@~0.1.8

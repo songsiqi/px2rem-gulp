@@ -1,14 +1,13 @@
 'use strict';
 
-var path = require('path');
 var extend = require('extend');
 var through = require('through2');
 var gutil = require('gulp-util');
 var Px2rem = require('px2rem');
 
-// Vinyl is a very simple metadata object that describes a file，
+// Vinyl is a very simple metadata object that describes a file,
 // see https://medium.com/@contrahacks/gulp-3828e8126466
-// We use it to output multiple files from a single input file while using gulp.
+// We use it to output multiple files from a single input file while using gulp,
 // see https://gist.github.com/cecilemuller/40880002c340edaa7e4a
 var File = require('vinyl');
 
@@ -73,5 +72,5 @@ module.exports = function(options) {
         return callback(); // indicate that the file has been processed
     }
 
-    return through.obj(transformFunction); // returning the file stream
+    return through.obj(transformFunction); // return the file stream
 };
