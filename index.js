@@ -19,12 +19,10 @@ module.exports = function(options) {
 
     var config = {
         baseDpr: 2,             // base device pixel ratio (default: 2)
-        threeVersion: true,     // whether to generate @1x, @2x and @3x version stylesheet (default: true)
+        threeVersion: false,    // whether to generate @1x, @2x and @3x version stylesheet (default: false)
         remVersion: true,       // whether to generate rem version stylesheet (default: true)
-        remUnit: 64,            // rem unit value (default: 64)
-        remPrecision: 6,        // rem value precision (default: 6)
-        forcePxComment: 'px',   // force px comment (default: `px`)
-        keepComment: 'no'       // no transform value comment (default: `no`)
+        remUnit: 75,            // rem unit value (default: 75)
+        remPrecision: 6         // rem value precision (default: 6)
     };
 
     extend(config, options);

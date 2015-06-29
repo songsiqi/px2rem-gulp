@@ -4,6 +4,14 @@ This is a gulp plugin for [px2rem](https://www.npmjs.com/package/px2rem)
 
 CLI tool provided in [px2rem](https://www.npmjs.com/package/px2rem)
 
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
+
+[npm-image]: https://img.shields.io/npm/v/gulp-px3rem.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/gulp-px3rem
+[downloads-image]: http://img.shields.io/npm/dm/gulp-px3rem.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/gulp-px3rem
+
 ## Usage
 
 The raw stylesheet only contains @2x style, and if you
@@ -31,12 +39,10 @@ gulp.task('px2rem', function() {
 ```
 px2rem({
     baseDpr: 2,             // base device pixel ratio (default: 2)
-    threeVersion: true,     // whether to generate 3x version (default: true)
+    threeVersion: false,    // whether to generate @1x, @2x and @3x version (default: false)
     remVersion: true,       // whether to generate rem version (default: true)
-    remUnit: 64,            // rem unit value (default: 64)
-    remPrecision: 6,        // rem precision (default: 6)
-    forcePxComment: 'px',   // force px comment (default: `px`)
-    keepComment: 'no'       // no transform value comment (default: `no`)
+    remUnit: 75,            // rem unit value (default: 75)
+    remPrecision: 6         // rem precision (default: 6)
 })
 ```
 
@@ -48,7 +54,7 @@ One raw stylesheet: `test.css`
 
 ```
 .selector {
-    width: 128px;
+    width: 150px;
     height: 64px; /*px*/
     font-size: 28px; /*px*/
     border: 1px solid #ddd; /*no*/
@@ -82,7 +88,7 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 64px;
+    width: 75px;
     height: 32px;
     font-size: 14px;
     border: 1px solid #ddd;
@@ -93,7 +99,7 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 128px;
+    width: 150px;
     height: 64px;
     font-size: 28px;
     border: 1px solid #ddd;
@@ -104,7 +110,7 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 192px;
+    width: 225px;
     height: 96px;
     font-size: 42px;
     border: 1px solid #ddd;
@@ -112,6 +118,13 @@ Rem version: `test.debug.css`
 ```
 
 ## Change Log
+
+### 0.2.0
+
+* Deps: px2rem@~0.3.0
+    * Change default remUnit to 75.
+    * Delete comment config.
+    * Don't generate @1x, @2x and @3x version stylesheet by default.
 
 ### 0.1.9
 
