@@ -5,12 +5,6 @@ var through = require('through2');
 var gutil = require('gulp-util');
 var Px2rem = require('px2rem');
 
-// Vinyl is a very simple metadata object that describes a file,
-// see https://medium.com/@contrahacks/gulp-3828e8126466
-// We use it to output multiple files from a single input file while using gulp,
-// see https://gist.github.com/cecilemuller/40880002c340edaa7e4a
-var File = require('vinyl');
-
 var PluginError = gutil.PluginError;
 var pluginName = 'gulp-px3rem';
 
@@ -44,7 +38,7 @@ module.exports = function(options) {
             if (config.threeVersion) {
                 for (var dpr = 1; dpr <= 3; dpr++) {
                     var newCssText = px2remIns.generateThree(cssText, dpr);
-                    var vfile = new File({
+                    var vfile = new gutil.File({
                         cwd: file.cwd,
                         base: file.base,
                         path: file.path.replace(/(.debug)?.css$/, dpr + 'x.debug.css'),
@@ -57,7 +51,7 @@ module.exports = function(options) {
             // generate rem version stylesheet
             if (config.remVersion) {
                 var newCssText = px2remIns.generateRem(cssText);
-                var vfile = new File({
+                var vfile = new gutil.File({
                     cwd: file.cwd,
                     base: file.base,
                     path: file.path.replace(/(.debug)?.css$/, '.debug.css'),

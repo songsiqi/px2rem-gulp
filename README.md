@@ -5,10 +5,13 @@ This is a gulp plugin for [px2rem](https://www.npmjs.com/package/px2rem)
 CLI tool provided in [px2rem](https://www.npmjs.com/package/px2rem)
 
 [![NPM version][npm-image]][npm-url]
+[![Build status][travis-image]][travis-url]
 [![Downloads][downloads-image]][downloads-url]
 
 [npm-image]: https://img.shields.io/npm/v/gulp-px3rem.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/gulp-px3rem
+[travis-image]: https://img.shields.io/travis/songsiqi/px2rem-gulp.svg?style=flat-square
+[travis-url]: https://travis-ci.org/songsiqi/px2rem-gulp
 [downloads-image]: http://img.shields.io/npm/dm/gulp-px3rem.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/gulp-px3rem
 
@@ -118,6 +121,11 @@ Rem version: `test.debug.css`
 ```
 
 ## Change Log
+
+### 0.2.1
+
+* Remove deps to vinyl, use gulp-util.
+* Enhance test case.
 
 ### 0.2.0
 
