@@ -22,10 +22,12 @@ module.exports = function(options) {
     extend(config, options);
 
     function transformFunction(file, encoding, callback) {
+        /* istanbul ignore if */
         if (file.isNull()) {
             return callback(null, file);
         }
 
+        /* istanbul ignore if */
         if (file.isStream()) {
             return callback(new PluginError(pluginName, 'Streaming not supported'));
         }

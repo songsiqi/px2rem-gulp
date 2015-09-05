@@ -25,7 +25,7 @@ describe('px2rem-gulp', function() {
 
     it('[default] should output right rem file', function(done) {
         var oldCssFile = createVinylFile('test.css');
-        var stream = px2rem({remUnit: 64});
+        var stream = px2rem();
         stream.on('data', function(newCssFile) {
             var outputText = newCssFile.contents.toString('utf8');
             var srcText = fs.readFileSync(path.join(__dirname, 'test.debug.css'), {encoding: 'utf8'});
@@ -38,7 +38,7 @@ describe('px2rem-gulp', function() {
 
     it('should output right @1x, @2x and @3x file', function(done) {
         var oldCssFile = createVinylFile('test.css');
-        var stream = px2rem({remUnit: 64, threeVersion: true, remVersion: false});
+        var stream = px2rem({threeVersion: true, remVersion: false});
         var count = 3;
         stream.on('data', function(newCssFile) {
             var dpr = newCssFile.path.match(/test(\d)x\./i)[1];
@@ -56,7 +56,7 @@ describe('px2rem-gulp', function() {
     it('should output right file cwd, base and path', function(done) {
         var base = 'vbase';
         var oldCssFile = createVinylFile('test.css', base);
-        var stream = px2rem({remUnit: 64});
+        var stream = px2rem();
         stream.on('data', function(newCssFile) {
             assert.equal(newCssFile.cwd, __dirname);
             assert.equal(newCssFile.base, path.join(__dirname, base));
@@ -73,7 +73,7 @@ describe('px2rem-gulp', function() {
             createVinylFile('test.css', 'vbase')
         ];
         var count = oldCssFiles.length;
-        var stream = px2rem({remUnit: 64});
+        var stream = px2rem();
         stream.on('data', function(newCssFile) {
             var outputText = newCssFile.contents.toString('utf8');
             var srcText = fs.readFileSync(path.join(__dirname, 'test.debug.css'), {encoding: 'utf8'});
