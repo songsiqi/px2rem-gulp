@@ -1,7 +1,7 @@
 {
     "name": "gulp-px3rem",
     "description": "A gulp plugin for px2rem",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "homepage": "https://github.com/songsiqi/px2rem-gulp",
     "author": {
         "name": "songsiqi",
@@ -24,7 +24,7 @@
         "through2": "^0.6.1",
         "gulp-util": "^3.0.0",
         "extend": "~2.0.0",
-        "px2rem": "~0.3.0"
+        "px2rem": "~0.4.0"
     },
     "devDependencies": {
         "istanbul": "^0.3.6",
@@ -37,7 +37,7 @@
     },
     "scripts": {
         "test": "mocha",
-        "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
+        "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter dot"
     },
     "main": "index.js",
     "keywords": [

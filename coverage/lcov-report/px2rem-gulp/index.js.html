@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for px2rem-gulp/index.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">px2rem-gulp/index.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(28 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">90% <small>(9 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(2 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(28 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric">2 statements, 2 branches</span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">px2rem-gulp/</a> &#187; index.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var extend = require('extend');
+var through = require('through2');
+var gutil = require('gulp-util');
+var Px2rem = require('px2rem');
+&nbsp;
+var PluginError = gutil.PluginError;
+var pluginName = 'gulp-px3rem';
+&nbsp;
+&nbsp;
+module.exports = function(options) {
+&nbsp;
+    var config = {
+        baseDpr: 2,             // base device pixel ratio (default: 2)
+        threeVersion: false,    // whether to generate @1x, @2x and @3x version stylesheet (default: false)
+        remVersion: true,       // whether to generate rem version stylesheet (default: true)
+        remUnit: 75,            // rem unit value (default: 75)
+        remPrecision: 6         // rem value precision (default: 6)
+    };
+&nbsp;
+    extend(config, options);
+&nbsp;
+    function transformFunction(file, encoding, callback) {
+        /* istanbul ignore if */
+        <span class="skip-if-branch" title="if path not taken" >I</span>if (file.isNull()) {
+<span class="cstat-skip" title="statement not covered" >            return callback(null, file);</span>
+        }
+&nbsp;
+        /* istanbul ignore if */
+        <span class="skip-if-branch" title="if path not taken" >I</span>if (file.isStream()) {
+<span class="cstat-skip" title="statement not covered" >            return callback(new PluginError(pluginName, 'Streaming not supported'));</span>
+        }
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (file.isBuffer()) {
+            var px2remIns = new Px2rem(config);
+            var cssText = file.contents.toString('utf8');
+&nbsp;
+            // generate @1x, @2x and @3x version stylesheet
+            if (config.threeVersion) {
+                for (var dpr = 1; dpr &lt;= 3; dpr++) {
+                    var newCssText = px2remIns.generateThree(cssText, dpr);
+                    var vfile = new gutil.File({
+                        cwd: file.cwd,
+                        base: file.base,
+                        path: file.path.replace(/(.debug)?.css$/, dpr + 'x.debug.css'),
+                        contents: new Buffer(newCssText)
+                    });
+                    this.push(vfile);
+                }
+            }
+&nbsp;
+            // generate rem version stylesheet
+            if (config.remVersion) {
+                var newCssText = px2remIns.generateRem(cssText);
+                var vfile = new gutil.File({
+                    cwd: file.cwd,
+                    base: file.base,
+                    path: file.path.replace(/(.debug)?.css$/, '.debug.css'),
+                    contents: new Buffer(newCssText)
+                });
+                this.push(vfile);
+            }
+        }
+&nbsp;
+        return callback(); // indicate that the file has been processed
+    }
+&nbsp;
+    return through.obj(transformFunction); // return the file stream
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Sep 05 2015 21:45:31 GMT+0800 (CST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

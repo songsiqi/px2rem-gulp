@@ -122,6 +122,12 @@ Rem version: `test.debug.css`
 
 ## Change Log
 
+### 0.2.2
+
+* Deps: px2rem@~0.4.0
+    * The generated [data-dpr] rules follow the origin rule, no longer placed at the end of the whole style sheet.
+    * Optimize 0px, do not generate 3 [data-dpr] rules.
+
 ### 0.2.1
 
 * Remove deps to vinyl, use gulp-util.
