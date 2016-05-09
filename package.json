@@ -1,51 +1,33 @@
 {
-    "name": "gulp-px3rem",
-    "description": "A gulp plugin for px2rem",
-    "version": "0.2.2",
-    "homepage": "https://github.com/songsiqi/px2rem-gulp",
-    "author": {
-        "name": "songsiqi",
-        "email": "songsiqi2006@126.com"
-    },
-    "contributors": [
-        {
-            "name": "hongru",
-            "email": "hongru.chenhr@gmail.com"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:songsiqi/px2rem-gulp.git"
-    },
-    "engines": {
-        "node": ">= 0.10.0"
-    },
-    "dependencies": {
-        "through2": "^0.6.1",
-        "gulp-util": "^3.0.0",
-        "extend": "~2.0.0",
-        "px2rem": "~0.4.0"
-    },
-    "devDependencies": {
-        "istanbul": "^0.3.6",
-        "gulp": "^3.8.10",
-        "mocha": "^2.1.0",
-        "cssmin": "~0.4.3"
-    },
-    "directories": {
-        "test": "test"
-    },
-    "scripts": {
-        "test": "mocha",
-        "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter dot"
-    },
-    "main": "index.js",
-    "keywords": [
-        "3x",
-        "rem",
-        "px2rem",
-        "gulp"
-    ],
-    "readmeFilename": "README.md",
-    "license": "MIT"
+  "name": "gulp-px3rem",
+  "description": "A gulp plugin for px2rem",
+  "version": "0.2.2",
+  "homepage": "https://github.com/songsiqi/px2rem-gulp",
+  "author": "songsiqi <songsiqi2006@126.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:songsiqi/px2rem-gulp.git"
+  },
+  "dependencies": {
+    "through2": "^0.6.1",
+    "gulp-util": "^3.0.0",
+    "extend": "~2.0.0",
+    "px2rem": "~0.5.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.6",
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "cover": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --reporter dot"
+  },
+  "main": "index.js",
+  "keywords": [
+    "3x",
+    "rem",
+    "px2rem",
+    "gulp"
+  ],
+  "license": "MIT"
 }
