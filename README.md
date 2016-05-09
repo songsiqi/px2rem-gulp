@@ -31,9 +31,9 @@ var gulp = require('gulp');
 var px2rem = require('gulp-px3rem');
 
 gulp.task('px2rem', function() {
-    gulp.src('./*.css')
-        .pipe(px2rem())
-        .pipe(gulp.dest('./dest'))
+  gulp.src('./*.css')
+    .pipe(px2rem())
+    .pipe(gulp.dest('./dest'))
 });
 ```
 
@@ -41,11 +41,11 @@ gulp.task('px2rem', function() {
 
 ```
 px2rem({
-    baseDpr: 2,             // base device pixel ratio (default: 2)
-    threeVersion: false,    // whether to generate @1x, @2x and @3x version (default: false)
-    remVersion: true,       // whether to generate rem version (default: true)
-    remUnit: 75,            // rem unit value (default: 75)
-    remPrecision: 6         // rem precision (default: 6)
+  baseDpr: 2,             // base device pixel ratio (default: 2)
+  threeVersion: false,    // whether to generate @1x, @2x and @3x version (default: false)
+  remVersion: true,       // whether to generate rem version (default: true)
+  remUnit: 75,            // rem unit value (default: 75)
+  remPrecision: 6         // rem precision (default: 6)
 })
 ```
 
@@ -57,10 +57,10 @@ One raw stylesheet: `test.css`
 
 ```
 .selector {
-    width: 150px;
-    height: 64px; /*px*/
-    font-size: 28px; /*px*/
-    border: 1px solid #ddd; /*no*/
+  width: 150px;
+  height: 64px; /*px*/
+  font-size: 28px; /*px*/
+  border: 1px solid #ddd; /*no*/
 }
 ```
 
@@ -70,20 +70,20 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 2rem;
-    border: 1px solid #ddd;
+  width: 2rem;
+  border: 1px solid #ddd;
 }
 [data-dpr="1"] .selector {
-    height: 32px;
-    font-size: 14px;
+  height: 32px;
+  font-size: 14px;
 }
 [data-dpr="2"] .selector {
-    height: 64px;
-    font-size: 28px;
+  height: 64px;
+  font-size: 28px;
 }
 [data-dpr="3"] .selector {
-    height: 96px;
-    font-size: 42px;
+  height: 96px;
+  font-size: 42px;
 }
 ```
 
@@ -91,10 +91,10 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 75px;
-    height: 32px;
-    font-size: 14px;
-    border: 1px solid #ddd;
+  width: 75px;
+  height: 32px;
+  font-size: 14px;
+  border: 1px solid #ddd;
 }
 ```
 
@@ -102,10 +102,10 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 150px;
-    height: 64px;
-    font-size: 28px;
-    border: 1px solid #ddd;
+  width: 150px;
+  height: 64px;
+  font-size: 28px;
+  border: 1px solid #ddd;
 }
 ```
 
@@ -113,20 +113,25 @@ Rem version: `test.debug.css`
 
 ```
 .selector {
-    width: 225px;
-    height: 96px;
-    font-size: 42px;
-    border: 1px solid #ddd;
+  width: 225px;
+  height: 96px;
+  font-size: 42px;
+  border: 1px solid #ddd;
 }
 ```
 
 ## Change Log
 
+### 0.3.0
+
+* Deps: px2rem@~0.5.0
+  * Support Animation keyframes (no `/*px*/` comment).
+
 ### 0.2.2
 
 * Deps: px2rem@~0.4.0
-    * The generated [data-dpr] rules follow the origin rule, no longer placed at the end of the whole style sheet.
-    * Optimize 0px, do not generate 3 [data-dpr] rules.
+  * The generated [data-dpr] rules follow the origin rule, no longer placed at the end of the whole style sheet.
+  * Optimize 0px, do not generate 3 [data-dpr] rules.
 
 ### 0.2.1
 
@@ -136,19 +141,19 @@ Rem version: `test.debug.css`
 ### 0.2.0
 
 * Deps: px2rem@~0.3.0
-    * Change default remUnit to 75.
-    * Delete comment config.
-    * Don't generate @1x, @2x and @3x version stylesheet by default.
+  * Change default remUnit to 75.
+  * Delete comment config.
+  * Don't generate @1x, @2x and @3x version stylesheet by default.
 
 ### 0.1.9
 
 * Deps: px2rem@^0.2.0
-    * Support media query.
+  * Support media query.
 
 ### 0.1.8
 
 * Deps: px2rem@~0.1.8
-    * Fix regular expression bug and common comments bug which affects rem transformation.
+  * Fix regular expression bug and common comments bug which affects rem transformation.
 
 ## License
 
